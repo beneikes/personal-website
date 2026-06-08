@@ -1,0 +1,22 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <p>&copy; {year} · Built with Astro</p>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--color-border);
+    margin-top: 4rem;
+  }
+
+  p {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+    color: var(--color-muted);
+    font-size: 0.875rem;
+  }
+</style>

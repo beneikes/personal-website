@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Jane Engineer — Control Systems Engineer">
+  <section class="profile">
+    <!-- PLACEHOLDER: replace with your real name -->
+    <h1>Jane Engineer</h1>
+    <!-- PLACEHOLDER: replace with your real tagline -->
+    <p class="tagline">Control Systems Engineer · Motor Control Specialist</p>
+
+    <!-- PLACEHOLDER: replace with your real bio -->
+    <p class="bio">
+      I'm an independent control systems engineer focused on motor control —
+      from current-loop tuning and field-oriented control to the embedded
+      firmware that ties sensors, power stages, and algorithms together. I
+      work with companies that need a motor to spin precisely, efficiently,
+      and reliably, whether that's a single prototype or a product heading
+      into volume production.
+    </p>
+    <p class="bio">
+      Outside of client work, I write about the control theory and embedded
+      engineering topics I find most interesting — you can find those posts
+      on the <a href="/blog/">blog</a>.
+    </p>
+
+    <ul class="links">
+      <!-- PLACEHOLDER: replace with your real contact links -->
+      <li><a href="mailto:hello@example.com">Email</a></li>
+      <li><a href="https://www.linkedin.com/in/placeholder">LinkedIn</a></li>
+      <li><a href="https://github.com/beneikes">GitHub</a></li>
+      <li><a href="/blog/">Blog</a></li>
+    </ul>
+  </section>
+</Layout>
+
+<style>
+  .profile {
+    max-width: 40rem;
+    margin-inline: auto;
+    padding-block: 3.5rem;
+  }
+
+  h1 {
+    margin-bottom: 0.25rem;
+  }
+
+  .tagline {
+    color: var(--color-muted);
+    font-size: 1.05rem;
+    margin-top: 0;
+  }
+
+  .bio {
+    line-height: 1.7;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--color-border);
+    padding-top: 1.5rem;
+  }
+</style>
