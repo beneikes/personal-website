@@ -1,33 +1,50 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const recentPosts = (await getCollection('blog'))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
 ---
 
-<Layout title="Jane Engineer — Control Systems Engineer">
+<Layout title="Benedikt Neikes — Control Systems Engineer">
   <section class="profile">
-    <!-- PLACEHOLDER: replace with your real name -->
-    <h1>Jane Engineer</h1>
-    <!-- PLACEHOLDER: replace with your real tagline -->
-    <p class="tagline">Control Systems Engineer · Motor Control Specialist</p>
+    <h1>Benedikt Neikes</h1>
+    <p class="tagline">Control Systems Engineer (M.Sc.), Motor Control Specialist</p>
 
-    <!-- PLACEHOLDER: replace with your real bio -->
     <p class="bio">
-      I'm an independent control systems engineer focused on motor control —
-      from current-loop tuning and field-oriented control to the embedded
-      firmware that ties sensors, power stages, and algorithms together. I
-      work with companies that need a motor to spin precisely, efficiently,
-      and reliably, whether that's a single prototype or a product heading
-      into volume production.
-    </p>
+	Hi, I'm Benedikt — a control systems engineer based in Cologne, Germany, and the person behind <a href="https://www.cosyne.de">Cosyne</a>.
+	</p>
+	<p class="bio">
+	I've spent over a decade designing motor-control systems end to end: the control algorithms, the firmware, the electronics, and the mechanics that tie them all together. Most of my work has been in automotive, robotics, and manufacturing, helping teams get their drives running well — whether that's a sensorless control scheme, a careful characterization of a motor, or a tricky bring-up that just needs a second set of eyes.
+	</p>
+	<p class="bio">
+	I have a soft spot for the hard problems. Over the years that's meant sensorless control (HFI, LQG), hardware-in-the-loop systems. I like building things that work, then writing down how they work so others can build on them.
+	</p>
+	<p class="bio">
+	If you're developing motors or drives and could use a hand, I'd be glad to hear what you're working on.
+	</p>
     <p class="bio">
       Outside of client work, I write about the control theory and embedded
       engineering topics I find most interesting — you can find those posts
       on the <a href="/blog/">blog</a>.
     </p>
 
+    <section class="recent-posts">
+      <h2>Recent posts</h2>
+      <ul>
+        {
+          recentPosts.map((post) => (
+            <li>
+              <a href={`/blog/${post.id}/`}>{post.data.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
     <ul class="links">
-      <!-- PLACEHOLDER: replace with your real contact links -->
-      <li><a href="mailto:hello@example.com">Email</a></li>
-      <li><a href="https://www.linkedin.com/in/placeholder">LinkedIn</a></li>
+      <li><a href="mailto:b.neikes@cosyne.de">Email</a></li>
       <li><a href="https://github.com/beneikes">GitHub</a></li>
       <li><a href="/blog/">Blog</a></li>
     </ul>
@@ -36,8 +53,6 @@ import Layout from '../layouts/Layout.astro';
 
 <style>
   .profile {
-    max-width: 40rem;
-    margin-inline: auto;
     padding-block: 3.5rem;
   }
 
@@ -53,6 +68,27 @@ import Layout from '../layouts/Layout.astro';
 
   .bio {
     line-height: 1.7;
+  }
+
+  .recent-posts {
+    margin-top: 2rem;
+  }
+
+  .recent-posts h2 {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-muted);
+    margin: 0 0 0.75rem;
+  }
+
+  .recent-posts ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
 
   .links {
