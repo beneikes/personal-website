@@ -4,48 +4,41 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-A minimal personal website built with Astro + TypeScript: a one-page profile/bio
-on the home page, and a Markdown-based blog for technical articles (motor
-control / control systems engineering topics).
-
-## Commands
-
-- `npm run dev` — start the dev server (http://localhost:4321)
-- `npm run build` — build the static site to `dist/`
-- `npm run preview` — serve the built `dist/` locally to sanity-check before deploying
-
-No lint, format, or test scripts are configured — keep the project minimal.
+A minimal one-page website for Cosyne, Benedikt Neikes' motor control
+engineering business. Plain static HTML and CSS: no framework, no build step,
+no JavaScript, no tracking, no cookies, no third-party requests (no web fonts,
+no CDNs).
 
 ## Structure
 
-- `src/content.config.ts` — defines the `blog` content collection using the
-  Content Layer `glob()` loader (Astro 5+ API: collections expose `id`, not `slug`)
-- `src/content/blog/*.md` — blog posts (frontmatter: `title`, `description`, `pubDate`)
-- `src/pages/index.astro` — home page (profile/bio) — contains `<!-- PLACEHOLDER -->`
-  comments marking content (name, tagline, bio, contact links) to be replaced with real info
-- `src/pages/blog/index.astro` — blog listing page
-- `src/pages/blog/[...slug].astro` — individual post page; renders posts via
-  `render(entry)` imported from `astro:content`, routes to `/blog/<id>/`
-- `src/layouts/Layout.astro` — shared layout; defines the site's design tokens
-  (CSS custom properties) and global typography in a single `<style is:global>` block
-- `src/components/` — `Header.astro` (nav) and `Footer.astro`
+- `site/` — everything that gets deployed
+  - `index.html` — the single page (intro, services, about, contact, Impressum, privacy)
+  - `style.css` — all styling; design tokens are CSS custom properties on `:root`
+  - `favicon.svg`
+- `drafts/` — unpublished article drafts and their images (not deployed)
+- `assets/` — source material (photos, MATLAB/Jupyter files); not deployed
+
+## Preview
+
+Open `site/index.html` directly in a browser, or serve it locally:
+`py -m http.server 8000 -d site` → http://localhost:8000
 
 ## Conventions
 
-- Styling is plain scoped CSS via Astro's `<style>` blocks — no CSS framework
-  (deliberate choice for an "extremely minimal" site)
-- Design is a strictly light, clean, technical palette (see `:root` custom
-  properties in `Layout.astro`) — no dark mode
-- Output mode is static (Astro's default) — `astro build` emits to `dist/`
+- Keep it minimal: hand-written HTML and CSS only; add nothing that needs a build
+  step or loads resources from other domains
+- System font stacks only (no web fonts) to keep the page fast and request-free
+- Strictly light, clean, technical palette (see `:root` in `style.css`); no dark mode
+- Must read well on mobile: single column, fluid type, no horizontal scrolling
 
 ## Deployment
 
-Deploy by running `npm run build` and uploading the contents of `dist/` via
-FTP/SSH to the target host. No platform adapter (Vercel/Netlify/etc.) is used.
-Host/path details are not yet configured — fill in here once decided.
+Upload the contents of `site/` via FTP/SSH to the web root of the host.
+Host/path details are not yet configured; fill them in here once decided.
 
-## Deliberately deferred
+## Open items
 
-RSS (`@astrojs/rss`) and a sitemap (`@astrojs/sitemap`) were left out of the
-initial build to keep scope tight for a 2-page site. Both are simple official
-integrations to add later once there's enough blog content to justify them.
+- The Impressum in `index.html` has bracketed placeholders (address, phone,
+  VAT ID) that must be filled in before going live (required by § 5 DDG)
+- `BOOKING_URL` in `index.html` (2 links) must be replaced with the Microsoft
+  Teams booking page URL
