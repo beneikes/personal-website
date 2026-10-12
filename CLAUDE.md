@@ -12,9 +12,11 @@ no CDNs).
 ## Structure
 
 - `site/` — everything that gets deployed
-  - `index.html` — the single page (intro, services, about, contact, Impressum, privacy)
+  - `index.html` — the main page (intro, services, work, about, contact)
+  - `impressum.html`, `privacy.html` — legal pages; they repeat the header and
+    footer from `index.html`, so keep all three in sync when changing those
   - `style.css` — all styling; design tokens are CSS custom properties on `:root`
-  - `favicon.svg`
+  - `favicon.ico`
 - `drafts/` — unpublished article drafts and their images (not deployed)
 - `assets/` — source material (photos, MATLAB/Jupyter files); not deployed
 
@@ -38,7 +40,7 @@ Host/path details are not yet configured; fill them in here once decided.
 
 ## Open items
 
-- The Impressum in `index.html` has bracketed placeholders (address, phone,
+- The Impressum in `impressum.html` has bracketed placeholders (address, phone,
   VAT ID) that must be filled in before going live (required by § 5 DDG)
-- `BOOKING_URL` in `index.html` (2 links) must be replaced with the Microsoft
-  Teams booking page URL
+- The Work section in `index.html` has three bracketed placeholder projects
+  that must be replaced with real ones
