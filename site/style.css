@@ -145,8 +145,9 @@ section:last-child {
 }
 
 .key {
+  font-size: 1rem;
   font-weight: 600;
-  color: var(--muted);
+  color: var(--text);
 }
 
 h1 {
@@ -284,12 +285,16 @@ h2 {
 /* Legal */
 
 .legal {
-  font-size: 0.9375rem;
   color: var(--muted);
 }
 
+.legal h2 {
+  margin: 2rem 0 0.75rem;
+  font-size: 1.125rem;
+  color: var(--text);
+}
+
 .legal h1 {
-  font-size: 1.25rem;
   color: var(--text);
 }
 

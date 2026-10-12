@@ -13,7 +13,7 @@ no CDNs).
 
 - `site/` — everything that gets deployed
   - `index.html` — the main page (intro, services, work, about, contact)
-  - `impressum.html`, `privacy.html` — legal pages; they repeat the header and
+  - `legal.html` (Impressum), `privacy.html` — legal pages; they repeat the header and
     footer from `index.html`, so keep all three in sync when changing those
   - `style.css` — all styling; design tokens are CSS custom properties on `:root`
   - `favicon.ico`
@@ -36,11 +36,10 @@ Open `site/index.html` directly in a browser, or serve it locally:
 ## Deployment
 
 Upload the contents of `site/` via FTP/SSH to the web root of the host.
-Host/path details are not yet configured; fill them in here once decided.
+Host: ALL-INKL.COM (managed via the KAS admin panel). Upload path not yet
+recorded; fill it in here once set up.
 
 ## Open items
 
-- The Impressum in `impressum.html` has bracketed placeholders (address, phone,
-  VAT ID) that must be filled in before going live (required by § 5 DDG)
 - The Work section in `index.html` has three bracketed placeholder projects
   that must be replaced with real ones
