@@ -148,7 +148,7 @@ section:last-child {
 
 h1 {
   margin: 0 0 1.25rem;
-  font-size: clamp(1.625rem, 4.5vw, 2.25rem);
+  font-size: clamp(1.5rem, 3.75vw, 1.6875rem);
   font-weight: 600;
   line-height: 1.25;
   letter-spacing: -0.01em;
