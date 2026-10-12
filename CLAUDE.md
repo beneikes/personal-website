@@ -41,5 +41,4 @@ recorded; fill it in here once set up.
 
 ## Open items
 
-- The Work section in `index.html` has three bracketed placeholder projects
-  that must be replaced with real ones
+- None at the moment

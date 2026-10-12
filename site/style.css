@@ -232,12 +232,12 @@ h2 {
   padding: 0;
 }
 
-.work li {
+.work > li {
   padding-block: 0.875rem;
   border-top: 1px solid var(--border);
 }
 
-.work li:first-child {
+.work > li:first-child {
   border-top: 0;
   padding-top: 0;
 }
@@ -255,9 +255,28 @@ h2 {
   color: var(--muted);
 }
 
-.work p:last-child {
+.points {
+  list-style: none;
   margin: 0.375rem 0 0;
+  padding: 0;
   color: var(--muted);
+}
+
+.points li {
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+/* Small filled dot, centred on the first line (line-height 1.65 → centre at 0.825em) */
+.points li::before {
+  content: "";
+  position: absolute;
+  left: 0.25rem;
+  top: calc(0.825em - 0.14em);
+  width: 0.28em;
+  height: 0.28em;
+  border-radius: 50%;
+  background: currentColor;
 }
 
 /* Contact */
