@@ -106,7 +106,7 @@ section:last-child {
   border-bottom: 0;
 }
 
-/* Phones: photo centred above the intro text */
+/* Phones: photo centered above the intro text */
 .intro {
   display: flex;
   flex-direction: column;
@@ -242,7 +242,7 @@ h2 {
   padding-left: 1.25rem;
 }
 
-/* Small filled dot, centred on the first line (line-height 1.65 → centre at 0.825em) */
+/* Small filled dot, centered on the first line (line-height 1.65 → center at 0.825em) */
 .points li::before {
   content: "";
   position: absolute;
