@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Control Systems Neikes — Motor Control Engineering</title>
-  <meta name="description" content="Benedikt Neikes — Motor control and drive algorithm development for robotics, automotive, and aerospace.">
+  <title>Control Systems Neikes - Motor Control Engineering</title>
+  <meta name="description" content="Benedikt Neikes - Motor control and drive algorithm development for robotics, automotive, and aerospace.">
   <meta name="author" content="Benedikt Neikes">
   <link rel="canonical" href="https://www.cosyne.de/">
   <link rel="icon" href="favicon.ico" sizes="any">
@@ -30,7 +30,6 @@
     "image": "https://www.cosyne.de/avatar.webp",
     "description": "Motor control engineering: sensorless FOC, drive electronics, model-based design, and HIL test systems for electric drives.",
     "email": "kontakt@cosyne.de",
-    "priceRange": "from €120/h plus VAT",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Hochstadenstr. 16",
@@ -42,7 +41,7 @@
       "@type": "Person",
       "@id": "https://www.cosyne.de/#person",
       "name": "Benedikt Neikes",
-      "jobTitle": "Motor Control Engineer",
+      "jobTitle": "Control Systems Engineer",
       "url": "https://www.cosyne.de/",
       "image": "https://www.cosyne.de/avatar.webp",
       "knowsAbout": ["Motor control", "Field-oriented control", "Sensorless control", "Electric drives", "Model-based design", "MATLAB/Simulink", "Hardware-in-the-loop testing", "Embedded software"]
@@ -78,59 +77,64 @@
 
     <section id="services">
       <h2>Services</h2>
-      <p>Available by the hour or day, from <strong>€120/h</strong> plus VAT, or at a fixed price for scoped tasks such as motor identification. For longer projects, I can join your team at set hours, remote or on-site.</p>
       <ul class="work">
         <li>
-          <h3>Motor control &amp; drive development</h3>
-          <p class="meta">For dynamic performance, efficiency, and low noise</p>
+          <h3>System identification</h3>
+          <p class="summary">Your simulation and the real system behave differently, the datasheet is incomplete or wrong, or you need a substitute motor or want to benchmark a competitor’s. Reliable parameters are the basis for analysis and control design; I measure them with specialized test benches, drives, and algorithms.</p>
           <ul class="points">
-            <li>Sensorless FOC for PMSM and BLDC motors (silent HFI, back-EMF observers)</li>
-            <li>Current, speed, and position control: cascaded or state-space (LQG, adaptive)</li>
-            <li>Drive electronics from prototype to series production</li>
+            <li>Parameter identification for BLDC, PMSM, IPMSM, SynRM, and stepper motors</li>
+            <li>Linear parameters (L<sub>d</sub>, L<sub>q</sub>, ψ<sub>m</sub>, R<sub>s</sub>) and nonlinear flux maps</li>
+            <li>Inertia, elasticity, friction, and backlash of your mechanism or gearbox</li>
           </ul>
         </li>
         <li>
-          <h3>Bring-up &amp; troubleshooting</h3>
-          <p class="meta">When a drive doesn’t behave as it should</p>
+          <h3>Control design</h3>
+          <p class="summary">Your drive doesn’t reach its targets for dynamics, efficiency, or noise, has to run without a position sensor, or earlier attempts haven’t delivered.</p>
           <ul class="points">
+            <li>Modeling, analysis, and simulation of the drive system in MATLAB/Simulink or Python</li>
+            <li>FOC with MTPA, field weakening, and SVPWM</li>
+            <li>Sensorless control (silent HFI, back-EMF observers)</li>
+            <li>Torque, velocity, and position control: cascaded P/PI, PID, or state-space (adaptive LQG, adaptive feedforward control)</li>
+            <li>Automatic code generation with Embedded Coder (MISRA C compliant)</li>
+            <li>Hand-written C code for efficient implementation</li>
+            <li>Peripheral configuration and driver implementation</li>
+            <li>MIL/SIL/PIL validation</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Custom hardware</h3>
+          <p class="summary">Off-the-shelf drives can’t do the job, or you need specialized test equipment.</p>
+          <ul class="points">
+            <li>Drive electronics development</li>
+            <li>Hardware-in-the-loop (HIL) test benches with real-time load emulation</li>
+            <li>Test systems for automated end-of-line (EOL) testing</li>
+            <li>Test systems for parameter identification and validation</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Troubleshooting</h3>
+          <p class="summary">Your system misses its design goals or vibrates, your sensorless control fails and the cause isn’t obvious, or some units run fine while others fail.</p>
+          <ul class="points">
+            <li>Design reviews and hands-on support during development</li>
             <li>Commissioning of new motors, drives, and actuators</li>
             <li>Root-cause analysis of instability, noise, and start-up issues</li>
             <li>Tuning and optimization of existing control systems</li>
           </ul>
         </li>
         <li>
-          <h3>Model-based design &amp; embedded software</h3>
-          <p class="meta">From simulation to production code</p>
-          <ul class="points">
-            <li>Modeling and simulation in MATLAB/Simulink</li>
-            <li>Automatic code generation and embedded C for microcontrollers</li>
-            <li>Automated control design and MIL/SIL/PIL validation</li>
-          </ul>
-        </li>
-        <li>
-          <h3>Characterization &amp; test systems</h3>
-          <p class="meta">Understanding the hardware before controlling it</p>
-          <ul class="points">
-            <li>Motor, gearbox, and actuator parameter identification</li>
-            <li>Hardware-in-the-loop (HIL) test benches with real-time load emulation</li>
-            <li>Custom test systems for automated end-of-line (EOL) testing</li>
-          </ul>
-        </li>
-        <li>
-          <h3>Training &amp; team support</h3>
-          <p class="meta">Building lasting know-how in your team</p>
+          <h3>Training</h3>
+          <p class="summary">You want to develop your drives in-house, but the know-how and toolchain are still missing. You’re looking for a foundation your engineers can build on long after the project ends.</p>
           <ul class="points">
             <li>Workshops on FOC, sensorless control, and model-based design</li>
             <li>Toolchain setup and coaching for engineers</li>
-            <li>Design reviews and hands-on support during development</li>
           </ul>
         </li>
       </ul>
+      <p>Available by the hour or day, or at a fixed price for scoped tasks. For longer projects, I can join your team as a full-time contractor on-site.</p>
     </section>
 
     <section id="work">
       <h2>Work</h2>
-      <p>A selection of larger projects, each running one to three years. Client names are kept confidential; further details and references are available on request, under NDA if needed.</p>
       <ul class="work">
         <li>
           <h3>Drive system for a 6-DOF flexible-joint robot</h3>
@@ -145,7 +149,7 @@
           <h3>Drive and test system for a UAV propulsion unit</h3>
           <p class="meta">Aerospace · Startup</p>
           <ul class="points">
-            <li>Hybrid sensorless control from standstill to full speed</li>
+            <li>Hybrid silent sensorless control from standstill to full speed</li>
             <li>Highly dynamic field weakening with nonlinearity compensation</li>
             <li>Hardware-in-the-loop test bench with real-time load emulation</li>
           </ul>
@@ -154,7 +158,7 @@
           <h3>Sensorless drive system for an electric pump</h3>
           <p class="meta">Automotive · Tier-1 supplier</p>
           <ul class="points">
-            <li>Silent sensorless control with high-bandwidth disturbance rejection</li>
+            <li>Sensorless control with high-bandwidth disturbance rejection</li>
             <li>Test bench for motor parameter identification and validation</li>
             <li>Model-based design toolchain and training for the in-house team</li>
           </ul>
@@ -169,6 +173,7 @@
           </ul>
         </li>
       </ul>
+      <p>Client names are kept confidential; further details and references are available on request, under NDA if needed.</p>
     </section>
 
     <section id="about">

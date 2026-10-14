@@ -22,6 +22,7 @@ perfect. English only for now.
     footer from `index.html`, so keep all three in sync when changing those
   - `style.css` — all styling; design tokens are CSS custom properties on `:root`
   - `favicon.ico`
+  - `.htaccess` — redirects http and the bare domain to `https://www.`
 - `drafts/` — unpublished article drafts and their images (not deployed)
 - `assets/` — source material (photos, MATLAB/Jupyter files); not deployed
 
@@ -52,23 +53,25 @@ Open `site/index.html` directly in a browser, or serve it locally:
   available on request, under NDA if needed
 - Work entries: title, an "Industry · Client type" meta line, and short technical
   bullets; no bold "result" lines. Keep the classes `work`, `points`, and `meta`
-- Pricing "from €120/h plus VAT": don't change the number unless Benedikt says so
+- No hourly rate on the site; the note on availability (hourly, daily, fixed
+  price, joining the team) sits at the bottom of Services
+- Services entries: title, a short problem-first `summary` paragraph, and
+  `points` bullets
 - "Book a call" links to the Microsoft Teams booking page (30-minute intro call)
 
 ## Deployment
 
-Upload the contents of `site/` via FTP/SSH to the web root of the host.
+Upload the contents of `site/` via FTP/SSH to the web root of the host,
+including the hidden `.htaccess` (some FTP clients skip dotfiles).
 Host: ALL-INKL.COM (managed via the KAS admin panel). Upload path not yet
 recorded; fill it in here once set up.
 
-Absolute URLs currently use `https://www.cosyne.de/`: canonical and `og:` tags
-and JSON-LD in `index.html`, plus `sitemap.xml` and `robots.txt`. Change them
-all together when switching domains.
+Absolute URLs use `https://www.cosyne.de/`: canonical and `og:` tags and
+JSON-LD in `index.html`, plus `sitemap.xml`, `robots.txt`, and `.htaccess`.
+Keep them in sync.
 
 ## Open items
 
-- Domain switch to bneikes.de (or benedikt-neikes.de) as main, .com as optional
-  redirect; then move email to the new domain
 - Optional: LinkedIn link in Contact (only once Benedikt provides a URL)
 - Optional, Benedikt's choice: one personal sentence in About; a photo of his own
   hardware; vary the strict three-bullet pattern in a place or two

@@ -1,0 +1,5 @@
+# Send every request to https://www.cosyne.de/ with a single permanent redirect
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\.cosyne\.de$ [NC]
+RewriteRule ^ https://www.cosyne.de%{REQUEST_URI} [R=301,L]
