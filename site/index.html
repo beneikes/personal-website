@@ -79,26 +79,25 @@
       <h2>Services</h2>
       <ul class="work">
         <li>
-          <h3>System identification</h3>
-          <p class="summary">Your simulation and the real system behave differently, the datasheet is incomplete or wrong, or you need a substitute motor or want to benchmark a competitor’s. Reliable parameters are the basis for analysis and control design; I measure them with specialized test benches, drives, and algorithms.</p>
+          <h3>Control design</h3>
+          <p class="summary">Sometimes off-the-shelf drives and libraries won’t meet your performance or stability requirements. A model-based design approach gets the most out of your system: systematically, not by trial and error. Using the tools and libraries I’ve developed over the last ten years in MATLAB/Simulink, Python, and C, I provide:</p>
           <ul class="points">
-            <li>Parameter identification for BLDC, PMSM, IPMSM, SynRM, and stepper motors</li>
-            <li>Linear parameters (L<sub>d</sub>, L<sub>q</sub>, ψ<sub>m</sub>, R<sub>s</sub>) and nonlinear flux maps</li>
-            <li>Inertia, elasticity, friction, and backlash of your mechanism or gearbox</li>
+            <li><b>Field-oriented control (FOC)</b>: SVPWM, MTPA, field weakening, and harmonic suppression algorithms</li>
+            <li><b>Sensorless control</b>: silent HFI, flux and back-EMF observers, hybrid structures, and start-up solutions</li>
+            <li><b>Motion control</b>: cascaded P/PI and PID control, or optimal state-space control (LQG, Kalman filtering)</li>
+            <li><b>Embedded code</b>: MISRA-compliant hand-written C code, or code generation with Embedded Coder</li>
+            <li><b>Peripheral configuration</b>: ADC, PWM, and ISR setup for precisely synchronized sampling with any sensing topology, including single shunt</li>
+            <li><b>Validation</b>: model-, software-, processor-, and hardware-in-the-loop testing (MIL, SIL, PIL, and HIL)</li>
           </ul>
         </li>
         <li>
-          <h3>Control design</h3>
-          <p class="summary">Your drive doesn’t reach its targets for dynamics, efficiency, or noise, has to run without a position sensor, or earlier attempts haven’t delivered.</p>
+          <h3>System identification</h3>
+          <p class="summary">Your real system doesn’t behave like the simulation, and you’ve started to doubt the datasheets. Correct models and parameters are essential for model-based control design and system analysis, and just as useful for finding replacement motors or benchmarking competitors’ products. I can help.</p>
           <ul class="points">
-            <li>Modeling, analysis, and simulation of the drive system in MATLAB/Simulink or Python</li>
-            <li>FOC with MTPA, field weakening, and SVPWM</li>
-            <li>Sensorless control (silent HFI, back-EMF observers)</li>
-            <li>Torque, velocity, and position control: cascaded P/PI, PID, or state-space (adaptive LQG, adaptive feedforward control)</li>
-            <li>Automatic code generation with Embedded Coder (MISRA C compliant)</li>
-            <li>Hand-written C code for efficient implementation</li>
-            <li>Peripheral configuration and driver implementation</li>
-            <li>MIL/SIL/PIL validation</li>
+            <li><b>Motor parameters</b> (BLDC, brushed DC, PMSM, IPMSM, SynRM, and stepper motors): L<sub>d</sub>, L<sub>q</sub>, R<sub>s</sub>, and ψ<sub>m</sub> for standard FOC, plus flux maps with cross-saturation and differential inductances for advanced algorithms</li>
+            <li><b>Mechanical parameters</b>: inertia, stiffness, damping, backlash, and friction</li>
+            <li><b>Drive and sensor nonlinearities</b>: inverter dead time and encoder eccentricity</li>
+            <li><b>Load characteristics</b> of pumps, hydraulic systems, or propellers</li>
           </ul>
         </li>
         <li>
@@ -192,7 +191,7 @@
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>If you’re working on a motor drive system, I’d be happy to hear about your project or challenge.</p>
+      <p>Working on a motor drive and could use a helping hand? I’d be happy to hear about your project or challenge.</p>
       <ul class="contact">
         <li><span class="key">Call:</span> <a href="https://bookings.cloud.microsoft/book/BenediktNeikes30MinMeeting@cosyne.de/" target="_blank" rel="noopener">Book a 30-minute call</a></li>
         <li><span class="key">Email:</span> <a href="mailto:kontakt@cosyne.de">kontakt@cosyne.de</a></li>
