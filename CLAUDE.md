@@ -55,8 +55,11 @@ Open `site/index.html` directly in a browser, or serve it locally:
   bullets; no bold "result" lines. Keep the classes `work`, `points`, and `meta`
 - No hourly rate on the site; the note on availability (hourly, daily, fixed
   price, joining the team) sits at the bottom of Services
-- Services entries: title, a short problem-first `summary` paragraph, and
-  `points` bullets
+- Services entries: title; a `summary` paragraph that opens with the client's
+  problem (usually as a question); a second `summary` paragraph with a lead-in
+  ending in a colon (e.g., "I cover:"); and `points` bullets in the form
+  "<b>Label</b>: …". Draft copy lives in `services.md` (repo root) before it
+  goes on the site
 - "Book a call" links to the Microsoft Teams booking page (30-minute intro call)
 
 ## Deployment
