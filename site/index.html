@@ -86,19 +86,21 @@
             <li><b>Field-oriented control (FOC)</b> for BLDC, PMSM, IPMSM, SynRM, and stepper motors: SVPWM, MTPA, field weakening, and active harmonic suppression algorithms</li>
             <li><b>Sensorless control</b>: silent high-frequency injection (HFI), flux and back-EMF observers, start-up routines, and hybrid schemes across the full speed range</li>
             <li><b>Motion control</b>: cascaded control (P-PI, PID), optimal state-space control and estimation (LQR, Kalman filter), and specialized algorithms for robots (CTC) and elastic systems (LQG, ADRC)</li>
-            <li><b>Embedded code</b>: hand-written MISRA C–compliant code, or code generation with Embedded Coder, for STM32, NXP, Infineon, and TI C2000 microcontrollers</li>
-            <li><b>Peripheral configuration</b>: PWM, ADC, interrupt, and timer setup for precisely synchronized sampling with any sensing topology, including single-shunt</li>
-            <li><b>Validation</b>: model-, software-, processor-, and hardware-in-the-loop testing (MIL, SIL, PIL, and HIL)</li>
+            <li><b>Embedded code</b> for STM32, NXP, Infineon, TI C2000, and other microcontrollers: hand-written MISRA C–compliant code, or code generation with Embedded Coder</li>
+            <li><b>Peripheral configuration</b>: PWM, ADC, timer, and interrupt setup for precisely synchronized sampling with any current-sensing topology, including single-shunt</li>
+            <li><b>Validation</b>: model-, software-, processor-, and hardware-in-the-loop testing (MIL, SIL, PIL, HIL)</li>
           </ul>
         </li>
         <li>
           <h3>System identification</h3>
-          <p class="summary">Your real system doesn’t behave like the simulation, and you’ve started to doubt the datasheets. Correct models and parameters are essential for model-based control design and system analysis, and just as useful for finding replacement motors or benchmarking competitors’ products. I can help.</p>
+          <p class="summary">Your real system behaves differently from the simulation, or the datasheet values don’t match your measurements? Accurate models and parameters are not only essential for model-based control design and system analysis, but also helpful for finding replacement parts or benchmarking competitors.</p>
+          <p class="summary">Using specialized test benches, drives, and identification algorithms, I identify:</p>
           <ul class="points">
-            <li><b>Motor parameters</b> (BLDC, brushed DC, PMSM, IPMSM, SynRM, and stepper motors): L<sub>d</sub>, L<sub>q</sub>, R<sub>s</sub>, and ψ<sub>m</sub> for standard FOC, plus flux maps with cross-saturation and differential inductances for advanced algorithms</li>
-            <li><b>Mechanical parameters</b>: inertia, stiffness, damping, backlash, and friction</li>
-            <li><b>Drive and sensor nonlinearities</b>: inverter dead time and encoder eccentricity</li>
+            <li><b>Motor parameters</b> for BLDC, PMSM, IPMSM, SynRM, and stepper motors: linear (L<sub>d</sub>, L<sub>q</sub>, R<sub>s</sub>, ψ<sub>m</sub>) and nonlinear (flux maps, cross-saturation, back-EMF harmonics) model parameters</li>
+            <li><b>Motor characteristics</b>: torque–speed curves, efficiency maps, and torque ripple</li>
+            <li><b>Mechanical parameters</b>: inertia, stiffness, damping, backlash, and friction (Coulomb, viscous, Stribeck)</li>
             <li><b>Load characteristics</b> of pumps, hydraulic systems, or propellers</li>
+            <li><b>Drive and sensor non-idealities</b>: control delays, inverter dead time, measurement noise, and encoder angle errors</li>
           </ul>
         </li>
         <li>
